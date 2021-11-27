@@ -1,4 +1,9 @@
+const urlPrefix = process.env.URL_PREFIX ? '/' + process.env.URL_PREFIX : ''
+
 module.exports = {
-  basePath: process.env.GITHUB_ACTIONS ? "/nextjs-blog" : "",
+  // ...
+  assetPrefix: urlPrefix,
+  basePath: urlPrefix,
   trailingSlash: true,
+  // ...
 };
